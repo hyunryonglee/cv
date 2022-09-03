@@ -37,78 +37,63 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
+%	RESEARCH INTERESTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research Interests}
+
+Computer Architecture, automatic benchmark synthesis, programmable accelerators, locality-aware execution,
+speculative execution,
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
 
 {\bf Massachusetts Institute of Technology, Cambridge, MA} \hfill { Aug 2016 - Present} \\ 
-S.M., Ph.D. in Electrical Engineering and Computer Science \\
-Advisor: Daniel Sanchez
+S.M. in Electrical Engineering and Computer Science \hfill { \it{anticipated} Spring 2022} \\
+Ph.D. in Electrical Engineering and Computer Science \hfill { \it{anticipated} Spring 2024} \\
+Cumulative GPA: 4.8/5
 
 {\bf Cornell University, Ithaca, NY} \hfill { Aug 2010 - May 2016} \\ 
 B.S. in Electrical and Computer Engineering \\
 Dean's List, all semesters \\
-GPA: 4.22/4.3 
+Cumulative GPA: 4.22/4.3 
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	HONORS AND AWARDS
+%	EMPLOYMENT SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Honors and Awards}
+\begin{rSection}{Research and Industry Employment}
 
-Kwanjeong Educational Foundation Fellowship \hfill {Aug 2016 - Present} \\
-John G. Pertsch Prize for highest GPA in ECE class of 2016 \hfill{May 2016} \\
-Best Undergraduate Poster Award, Industry-Academia Partnership Workshop \hfill { Oct 2015} \\
-Tau Beta Pi \hfill { Nov 2015 - Present} \\
-John G. Pertsch Prize for second highest GPA in ECE class of 2016 \hfill { May 2015} \\
-Eta Kappa Nu \hfill { Mar 2015 - Present} 
+\begin{rSubsection}{MIT Computer Science and Artificial Intelligence Lab}{September 2016 - Present}{Research Assistant}{Cambridge, Massachusetts}
 
-\end{rSection}
+\item Supervisor: Daniel Sanchez
+\item Lead development of techniques to automatically generate representative benchmarks of cloud applications 
+for microarchitecture design space exploration.
+\item Lead design of simulators for memristive crossbars that utilize in-memory compute capabilities to accelerate irregular algorithms.
+\item Design hardware features and algorithms for the Swarm multicore architecture using microarchitectural simulation.
+\end{rSubsection}
 
-%----------------------------------------------------------------------------------------
-%	RESEARCH INTERESTS
-%----------------------------------------------------------------------------------------
+\begin{rSubsection}{IBM Research}{May 2018 - Aug 2017}{Graduate Research Intern}{Yorktown Heights, NY}
 
-\begin{rSection}{Research Interests}
-
-Parallel and multicore systems, distributed systems, memory and storage systems
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Publications}
-
-S. Subramanian, M.C. Jeffrey, M. Abeydeera, {\bf H.R. Lee}, V.A. Ying, J. Emer, D. Sanchez. 
-"Fractal: An Execution Model for Fine-Grain Nested Speculative Parallelism,"
-In \textit{Proc. of the 44th annual International Symposium in Computer Architecture (ISCA-44)}, June 2017
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	WORKSHOPS AND PRESENTATIONS
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Workshops}
-
-J. Mukundan, J.B. Kuang, A. Jagmohan, M. Franceschini, H. Hunter, {\bf H.R. Lee}, S. Bisht, J.F. Martínez. "Improving I/O Scheduling in FLASH-based SSDs through Foresight". Industry-Academia Partnership Workshop, October 2015.
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	WORK SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Work Experience}
+\item Developed analytical models and simulators for evaluating the effectiveness of using memristive crossbars
+to accelerate irregular algorithms via in-memory computing.
+\end{rSubsection}
 
 \begin{rSubsection}{Apple Inc.}{May 2015 - Aug 2015}{Firmware Engineering Intern}{Cupertino, CA}
 
-\item Refactored the C firmware codebase of Mac related input devices to be compatible with the Clang/LLVM compiler toolchain. 
+\item Refactored the codebase of Mac related input devices. 
+\end{rSubsection}
+
+\begin{rSubsection}{Computer Systems Laboratory, Cornell University}{Jun 2014 - May 2016}{Undergraduate Research Assistant}{Ithaca, NY}
+
+\item Developed a self-optimizing Solid-State Drive I/O scheduler on the Flash Translation Layer using a reinforcement learning agent. 
 \end{rSubsection}
 
 \begin{rSubsection}{Ministry of National Defense}{Sep 2012 - Jun 2014}{Sergeant}{Seoul, South Korea}
@@ -121,15 +106,43 @@ J. Mukundan, J.B. Kuang, A. Jagmohan, M. Franceschini, H. Hunter, {\bf H.R. Lee}
 \newpage
 
 %----------------------------------------------------------------------------------------
-%	PRIOR RESEARCH EXPERIENCE SECTION
+%	HONORS AND AWARDS
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Prior Research Experience}
+\begin{rSection}{Honors and Awards}
 
-\begin{rSubsection}{Improving I/O Scheduling in Flash-based SSDs through Foresight}{Aug 2014 - May 2016}{Advisor: José F. Martínez}
+{\bf Kwanjeong Educational Foundation Fellowship} \hfill {2016 - 2019} \\
+{\bf John G. Pertsch Prize} for highest GPA in ECE class of 2016 \hfill{2016} \\
+{\bf Best Undergraduate Poster Award}, Industry-Academia Partnership Workshop \hfill {2015} \\
+{\bf Tau Beta Pi} \hfill {2015} \\
+{\bf John G. Pertsch Prize} for second highest GPA in ECE class of 2016 \hfill {2015} \\
+{\bf Eta Kappa Nu} \hfill {2015} 
 
-\item Developed a self-optimizing SSD I/O scheduler on the Flash Translation Layer based on reinforcement learning (RL) principles. 
-\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Publications}
+
+M.C. Jeffrey, V.A. Ying, S. Subramanian, {\bf H.R. Lee}, J. Emer, and D. Sanchez,
+"Harmonizing Speculative and Non-Speculative Execution in Architectures for Ordered Parallelism",
+in \textit{51st Intl. Symposium on Microarchitecture (MICRO)}, 2018. Acceptance rate: 74/351 (21\%)
+
+S. Subramanian, M.C. Jeffrey, M. Abeydeera, {\bf H.R. Lee}, V.A. Ying, J. Emer, and D. Sanchez, 
+"Fractal: An Execution Model for Fine-Grain Nested Speculative Parallelism,"
+In \textit{44th Intl. Symposium on Computer Architecture (ISCA)}, 2017. Acceptance rate: 54/322 (17\%)
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORKSHOPS AND PRESENTATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Workshops}
+
+J. Mukundan, J.B. Kuang, A. Jagmohan, M. Franceschini, H. Hunter, {\bf H.R. Lee}, S. Bisht, and J.F. Martínez, "Improving I/O Scheduling in FLASH-based SSDs through Foresight", In Industry-Academia Partnership Workshop, October 2015.
 
 \end{rSection}
 
@@ -138,24 +151,22 @@ J. Mukundan, J.B. Kuang, A. Jagmohan, M. Franceschini, H. Hunter, {\bf H.R. Lee}
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Teaching Experience}
-
-Grader, ECE 4740: Digital VLSI \hfill {Jan 2016 - May 2016} \\
-Grader, ECE 2200: Signals and Systems \hfill {Jan 2015 - May 2015} \\
-Grader, ECE 2300: Digital Logic Design and Computer Organization \hfill{Jan 2012 - May 2012}
+Teaching Assistant, 6.823: Computer Architecture, MIT \hfill {Spring 2019, Spring 2021, Fall 2021} \\
+Grader, ECE 4740: Digital VLSI, Cornell University \hfill {Spring 2016} \\
+Grader, ECE 2200: Signals and Systems, Cornell University \hfill {Spring 2015} \\
+Grader, ECE 2300: Digital Logic Design and Computer Organization, Cornell University \hfill{Spring 2012}
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
+%	SKILLS
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Computer Skills}
+\begin{rSection}{Skills}
 
-\begin{tabular}{ll}
-Languages & C/C++, Python, Java, Verilog, SQL \\
-Operating Systems & Linux, macOS, Windows \\
-Tools     & Pin, MATLAB, Cadence Virtuoso, Vim, Git \\
-\end{tabular}
+Computer architecture research, simulation and analytical modeling, benchmark development \\
+Proficient in C/C++, Python, Pin, Murphi, and Unix tools. \\
+Experience with Java, Verilog, MATLAB, and PyMTL.
 
 \end{rSection}
 
