@@ -26,6 +26,9 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 
+\usepackage{enumitem}
+\setlist[itemize]{nosep, topsep=0pt, left=1em, font=\tiny}
+
 \pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
