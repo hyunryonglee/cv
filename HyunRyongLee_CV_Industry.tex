@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{verbatim}
+\usepackage{multicol}
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+
+\name{Hyun Ryong (Ryan) Lee} % Your name
+%\address{32 Vassar St, Cambridge, MA 02139} % Your address
+\address{(607) 793-6859 \\ hrlee@csail.mit.edu} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH INTERESTS
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Research Interests}
+%
+%computer architecture, designing hardware/software for sparse workloads, benchmarking, performance engineering
+%
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Massachusetts Institute of Technology, Cambridge, MA} \hfill { September 2016 - Present} \\ 
+S.M. in Electrical Engineering and Computer Science \hfill {May 2022} \\
+Ph.D. in Electrical Engineering and Computer Science \hfill { \it{Expected August 2025}} \\
+Cumulative GPA: 4.8/5
+
+{\bf Cornell University, Ithaca, NY} \hfill { August 2010 - May 2016} \\ 
+B.S. in Electrical and Computer Engineering \\
+Dean's List, all semesters \\
+Cumulative GPA: 4.22/4.3 
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EMPLOYMENT SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research and Industry Employment}
+
+\begin{rSubsection}{MIT Computer Science and Artificial Intelligence Lab}{September 2016 - Present}{Research Assistant}{Cambridge, Massachusetts}
+
+\item Supervisor: Daniel Sanchez
+\item Developed {\it Gist:} an architectural support for DRAM that reduces main memory accesses for sparse workloads.
+    \vspace{-0.2cm}
+    \begin{itemize}
+    \item Gist accelerates sparse workloads by placing a small programmable engine in each DRAM chip that can autonomously traverses 
+        a wide range of sparse data structures, transferring only the necessary data to the core for computation.
+    \item Gist speeds up a wide range of graph analytics workloads by gmean 1.6$\times$ over prior state-of-the-art accelerators for sparse workloads,
+        with $\leq$1\,\% overhead in DRAM chip area.
+    \item Developed a PIN-based cycle-accurate simulator of Gist based on Zsim and DRAMsim3.
+    \end{itemize}
+    \vspace{0.2cm}
+\item Developed {\it Terminus}, a programmable accelerator for operations on sparse data structures.
+    \vspace{-0.2cm}
+    \begin{itemize}
+    \item Terminus accelerates the irregular control-flow and long-latency memory accesses of read and update operations
+        on sparse data structures by executing these operations in place of the core.
+    \item Terminus speeds up a diverse set of data structures such as hash tables and trees by gmean 7.4$\times$ over the CPU baseline,
+        with $\leq$0.5\,\% overhead in the core area.
+    \item Gist provides flexible acceleration of graph analytics workloads (gmean 1.6$\times$ speedup over prior state-of-the-art accelerators)
+    with $\leq$1\,\% overhead in DRAM chip area.
+    \item Developed a PIN-based cycle-accurate simulator of Terminus based on Zsim.
+    \end{itemize}
+    \vspace{0.2cm}
+\item Developed {\it Datamime}, a tool to automatically generate representative benchmarks of production workloads.
+    \vspace{-0.2cm}
+    \begin{itemize}
+        \item Datamime produces representative benchmarks by automatically generating a representative \emph{dataset}
+            of the target application using a profile-guided approach.
+        \item Datamime produces benchmarks with $\leq$3.2\,\% error in IPC compared to the target application.
+        \item Developed an application profiler that uses hardware performance counters and Intel CAT.
+        \item Developed a C++/Python based dataset generator that uses Bayesian Optimization.
+    \end{itemize}
+    \vspace{0.2cm}
+\item Designed hardware features and algorithms for the {\it Swarm} multicore architecture.
+\end{rSubsection}
+
+\begin{rSubsection}{Apple Inc.}{May 2023 - Aug 2023}{Platform Architecture Intern}{Santa Clara, CA}
+
+\item Developed methodologies to estimate the performance impact of thread migration across CPUs.
+\end{rSubsection}
+
+\begin{rSubsection}{IBM Research}{May 2018 - Aug 2018}{Graduate Research Intern}{Yorktown Heights, NY}
+
+\item Developed analytical models and simulators for evaluating the effectiveness of using memristive crossbars
+to accelerate irregular algorithms via in-memory computing.
+\end{rSubsection}
+
+\begin{rSubsection}{Apple Inc.}{May 2015 - Aug 2015}{Firmware Engineering Intern}{Cupertino, CA}
+
+\item Refactored the codebase of Mac related input devices. 
+\end{rSubsection}
+
+\begin{rSubsection}{Computer Systems Laboratory, Cornell University}{Jun 2014 - May 2016}{Undergraduate Research Assistant}{Ithaca, NY}
+
+\item Developed a self-optimizing Solid-State Drive I/O scheduler on the Flash Translation Layer using a reinforcement learning agent. 
+\end{rSubsection}
+
+%\begin{rSubsection}{Ministry of National Defense}{Sep 2012 - Jun 2014}{Sergeant}{Seoul, South Korea}
+%\item Completed two years of mandatory military service for South Korea
+%\end{rSubsection}
+
+\end{rSection}
+
+\vspace{1cm}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+
+Simulation and analytical modeling, performance modeling, benchmark development \\
+C, C++, CUDA, Python, Pin, and Unix tools. \\
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Publications}
+
+{\bf H. Lee}, T. Han, D. Sanchez,
+"Gist: Enhancing DRAM with Architectural Support to Reduce Main Memory Accesses for Sparse Workloads",
+under submission to \textit{Proceedings of the 58th International Symposium on Microarchitecture (MICRO)}, 2025 %Acceptance rate: 74/351 (21\%)
+
+{\bf H. Lee} and D. Sanchez,
+"Terminus: A Programmable Accelerator for Read and Update Operations on Sparse Data Structures",
+in \textit{Proceedings of the 57th International Symposium on Microarchitecture (MICRO)}, 2024 %Acceptance rate: 74/351 (21\%)
+
+{\bf H. Lee} and D. Sanchez,
+"Datamime: Generating Representative Benchmarks by Automatically Synthesizing Datasets",
+in \textit{Proceedings of the 55th International Symposium on Microarchitecture (MICRO)}, 2022 %Acceptance rate: 74/351 (21\%)
+(\textbf{IEEE Micro's Top Picks 2023 Honorable Mention})
+
+M.C. Jeffrey, V.A. Ying, S. Subramanian, {\bf H. Lee}, J. Emer, and D. Sanchez,
+"Harmonizing Speculative and Non-Speculative Execution in Architectures for Ordered Parallelism",
+in \textit{Proceedings of the 51st International Symposium on Microarchitecture (MICRO)}, 2018 %Acceptance rate: 74/351 (21\%)
+
+S. Subramanian, M.C. Jeffrey, M. Abeydeera, {\bf H. Lee}, V.A. Ying, J. Emer, and D. Sanchez, 
+"Fractal: An Execution Model for Fine-Grain Nested Speculative Parallelism",
+In \textit{Proceedings of the 44th International Symposium on Computer Architecture (ISCA)}, 2017 %Acceptance rate: 54/322 (17\%)
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORKSHOPS AND PRESENTATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Workshops}
+
+J. Mukundan, J.B. Kuang, A. Jagmohan, M. Franceschini, H. Hunter, {\bf H. Lee}, S. Bisht, and J.F. Martínez, "Improving I/O Scheduling in FLASH-based SSDs through Foresight", In Industry-Academia Partnership Workshop, October 2015.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Honors and Awards}
+
+{\bf Kwanjeong Educational Foundation Fellowship} \hfill {2016 - 2022} \\
+\textbf{IEEE Micro's Top Picks Honorable Mention} \hfill {2023}
+%{\bf John G. Pertsch Prize} for highest GPA in ECE class of 2016 \hfill{2016} \\
+%{\bf Best Undergraduate Poster Award}, Industry-Academia Partnership Workshop \hfill {2015} \\
+%{\bf Tau Beta Pi} \hfill {2015} \\
+%{\bf John G. Pertsch Prize} for second highest GPA in ECE class of 2016 \hfill {2015} \\
+%{\bf Eta Kappa Nu} \hfill {2015} 
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Teaching Experience}
+Teaching Assistant, 6.823: Computer Architecture, MIT \hfill {Spring 2019, 2021; Fall 2021, 2023}
+\item Taught weekly discussion sections. Prepared and graded quizzes and labs related to 
+    various topics in computer architecture, ranging from branch prediction and cache coherence
+    to multicore architecture design and simulation.
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
